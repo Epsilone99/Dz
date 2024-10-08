@@ -1,0 +1,18 @@
+окт. 07, 2024 12:02:16 PM Dz2 main
+INFO: Exception
+окт. 07, 2024 12:03:25 PM Dz2 main
+INFO: Exception
+окт. 07, 2024 12:06:21 PM Dz2 main
+INFO: Exception
+окт. 07, 2024 12:06:21 PM Dz2 main
+WARNING: Warning
+окт. 07, 2024 12:15:08 PM Dz2 main
+INFO: Exception
+окт. 07, 2024 12:16:47 PM Dz2 main
+INFO: Exception
+окт. 07, 2024 2:35:24 PM Dz2 result
+INFO: Some kind of mistake
+окт. 07, 2024 2:35:51 PM Dz2 result
+INFO: Some kind of mistake
+окт. 07, 2024 3:07:04 PM Dz2 main
+INFO: wtf
