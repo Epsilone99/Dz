@@ -2,24 +2,20 @@ package OOP1;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
-public class Tree implements Serializable{
+public class Tree implements Serializable, Iterable<Person>{
     static Children child1;
     static Parentsmom mom;
     static Parents dad;
-    static Set<Person> fam;
+    static HashSet<Person> fam;
     @Serial
     private static final long serialVersionUID = 1L;
 
-    protected static Set<Person> Tre() {
+    protected static HashSet<Person> Tre() {
        mom = new Parentsmom("Женский", 22, "Сара", "13.07.2001", "");
        dad = new Parents("Mужской", 25, "Джон", "14.12.1999", "");
        child1 = new Children("Mужской", 2, "Дин", "03.09.2023", dad.getName(), mom.getName());
-       child1.setChildOf(mom.getName());
-       child1.setChildO(dad.getName());
        mom.setMotherOf(child1.getName());
        dad.setFather(child1.getName());
        fam = new HashSet<>();
@@ -87,7 +83,7 @@ public class Tree implements Serializable{
         boolean cont = true;
         while (cont){
             System.out.println("Выберите действия : \n 1 - Просмотреть детей у выбранного человека. \n 2 - Просмотреть наличие матери у человека. \n 3 - Просмотреть наличие отца у человека. \n " +
-                    "4 - Вывести всю полную информацию о людях. \n 5 - Завершить программу");
+                    "4 - Вывести всю полную информацию о людях. \n 5 - Сортировать по имени. \n 6 - Сортировать по возрасту. \n 7 - Закончить программу.");
                 switch (sc.nextInt()){
                     case 1 : sonCheck(Tre());
                     sc.nextLine();
@@ -101,9 +97,43 @@ public class Tree implements Serializable{
                     case 4 : printAll(Tre());
                     sc.nextLine();
                     break;
-                    case 5 : cont = false;
+                    case 5 : sortByName(Tre());
+                    sc.nextLine();
+                    break;
+                    case 6 : sortByAge(Tre());
+                    sc.nextLine();
+                    break;
+                    case 7 : cont = false;
                 }
         }
     }
+    protected static void sortByAge (HashSet<Person> people){
+        ArrayList<Person> arr = new ArrayList<>(people);
+        Collections.sort(arr, Comparator.comparingInt(Person::getAge));
+        for (Person p : arr){
+            System.out.println(p);
+        }
+    }
+    protected static void sortByName (HashSet<Person> people){
+        ArrayList<Person> arr = new ArrayList<>(people);
+        Collections.sort(arr, Comparator.comparing(Person::getName));
+        for (Person p : arr){
+            System.out.println(p);
+        }
+    }
 
+    @Override
+    public Iterator<Person> iterator() {
+        return new Iterator<Person>() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public Person next() {
+                return null;
+            }
+        };
+    }
 }
