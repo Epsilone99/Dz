@@ -1,9 +1,11 @@
+package start;
+
 import java.util.*;
 
 ////Дан LinkedList с несколькими элементами. В методе
 ////removeOddLengthStrings класса LLTasks реализуйте удаление строк, длина
 ////которых нечетная. Используйте LinkedList и стандартные методы.
-//public class Dz4 {
+//public class start.Dz4 {
 //    public static void main(String[] args) {
 //        System.out.println(upd_list(gen_list()));
 //    }
@@ -29,15 +31,15 @@ import java.util.*;
 //}
 
 //Задача 2. Реализация стека
-//        Реализуйте MyStack с использованием LinkedList с методами:
+//        Реализуйте start.MyStack с использованием LinkedList с методами:
 //● push(String element) - добавляет элемент на вершину стека
 //● pop() - возвращает элемент с вершины и удаляет его
 //● peek() - возвращает элемент с вершины, не удаляя
 //● getElements() - возвращает все элементы стека
 
-//public class Dz4 {
+//public class start.Dz4 {
 //    public static void main(String[] args) {
-//        MyStack ms = new MyStack();
+//        start.MyStack ms = new start.MyStack();
 //        ms.push("lol");
 //        ms.push("kek");
 //        ms.push("cheburek");
@@ -56,7 +58,7 @@ import java.util.*;
 //        принимает LinkedList<String> и строку, и возвращает количество
 //        вхождений строки в список.
 
-//public class Dz4 {
+//public class start.Dz4 {
 //    public static void main(String[] args) {
 //        sb(list(), "cat");
 //    }
@@ -86,7 +88,7 @@ import java.util.*;
 //Deque<Integer> и число n. Метод должен повернуть очередь вправо на n
 //позиций. Если n отрицательное, повернуть влево.
 
-//public class Dz4 {
+//public class start.Dz4 {
 //    public static void main(String[] args) {
 //        sortQ(Que());
 //    }

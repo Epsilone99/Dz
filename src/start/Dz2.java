@@ -1,6 +1,6 @@
-//import java.util.Scanner;
+package start;//import java.util.Scanner;
 //
-//public class Dz2 {
+//public class start.Dz2 {
 //    public static void main(String[] args) {
 //        System.out.println(fullurl(url()));
 //    }
@@ -27,20 +27,10 @@
 //    }
 //}
 
-import Logeeeeer.Log;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.lang.reflect.GenericArrayType;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.StringJoiner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
-//public class Dz2 {
+//public class start.Dz2 {
 //    public static void main(String[] args) {
 //        String[] headers = {"Name", "Age", "City"};
 //        String[][] data = {
@@ -61,7 +51,7 @@ import java.util.logging.Logger;
 //    }
 //}
 //
-//public class Dz2 {
+//public class start.Dz2 {
 //    public static void main(String[] args) {
 //        String text = "line1                     \n              line2\n       \nline3";
 //        String newStr = text.replaceAll("(?m)^\\s*$[\r\n]+", "");
@@ -74,7 +64,7 @@ import java.util.logging.Logger;
 //    }
 //}
 // ------------------------------Создание файла--------------------------------
-//public class Dz2 {
+//public class start.Dz2 {
 //    public static void main(String[] args) throws IOException {
 //        FileWriter fw = new FileWriter("out.txt");
 //        fw.write("Hello World");  //Добавление строки
@@ -85,7 +75,7 @@ import java.util.logging.Logger;
 
 //-------------------------------Запись в файл--------------------------------
 
-//public class Dz2 {
+//public class start.Dz2 {
 //    public static void main(String[] args) throws IOException{
 //        print(file("."), "out2.txt");
 //    }
@@ -123,7 +113,7 @@ import java.util.logging.Logger;
 //    }
 //}
 //
-//public class Dz2 {
+//public class start.Dz2 {
 //    public static void main(String[] args) {
 //        result(arr());
 //    }
@@ -159,7 +149,7 @@ import java.util.logging.Logger;
 //            e.printStackTrace();
 //        }
 //    }
-//    private static final Logger LOG = Log.log(Dz2.class.getName());
+//    private static final Logger LOG = Log.log(start.Dz2.class.getName());
 //    private static boolean Deystvie(){
 //        int x = 1;
 //        int y = 0;
@@ -170,7 +160,7 @@ import java.util.logging.Logger;
 //    }
 //}
 //
-//public class Dz2 {
+//public class start.Dz2 {
 //    public static void main(String[] args) {
 //        try {
 //            System.out.println(Deystvie());
@@ -182,7 +172,7 @@ import java.util.logging.Logger;
 //            e.printStackTrace();
 //        }
 //    }
-//    private static final Logger LOG = Log.log(Dz2.class.getName());
+//    private static final Logger LOG = Log.log(start.Dz2.class.getName());
 //    private static boolean Deystvie(){
 //        int x = 1;
 //        int y = 1;
@@ -194,11 +184,10 @@ import java.util.logging.Logger;
 //
 //}
 
-import java.util.Scanner;
 
 public class Dz2 {
     public static void main(String [] args) {
-        // Создаём экземпляр класса StringCompression
+        // Создаём экземпляр класса start.StringCompression
         StringCompression str = new StringCompression();
         String s1, s2;
         Scanner in = new Scanner(System.in);

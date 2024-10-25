@@ -1,6 +1,6 @@
+package start;
+
 import java.util.LinkedList;
-import java.util.Objects;
-import java.util.Scanner;
 
 public class MyStack {
 

@@ -1,8 +1,10 @@
+package start;
+
 import java.util.Scanner;
 
 public class StringCompression {
     public static void main(String [] args) {
-        // Создаём экземпляр класса StringCompression
+        // Создаём экземпляр класса start.StringCompression
         StringCompression str = new StringCompression();
         String s1, s2;
         Scanner in = new Scanner(System.in);

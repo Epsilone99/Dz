@@ -1,4 +1,4 @@
-//Задание 1. Студенческий справочник
+package start;//Задание 1. Студенческий справочник
 //Реализуйте программу для работы с простым справочником студентов.
 //Программа должна иметь следующие функции:
 //        ● addStudent(String name, Integer grade): Добавляет или
@@ -12,12 +12,10 @@
 //        ● removeStudent(String name): Удаляет запись о студенте по имени
 //из справочника. Если запись не существует, ничего не происходит.
 
-import java.util.*;
-
-//public class Dz5 {
+//public class start.Dz5 {
 //    public static void main(String[] args) {
 //        HashMap<String, Integer> students = new HashMap<>();
-//        Students st = new Students();
+//        start.Students st = new start.Students();
 //        st.addStudents(students);
 //        st.addStudents(students);
 //        st.addStudents(students);
@@ -36,9 +34,9 @@ import java.util.*;
 //        steps назад, или null, если таких шагов нет.
 //● getHistory(): Возвращает список сайтов в истории посещений, от
 //последнего посещенного к первом
-//public class Dz5 {
+//public class start.Dz5 {
 //    public static void main(String[] args) {
-//        BrowsHistory hist = new BrowsHistory();
+//        start.BrowsHistory hist = new start.BrowsHistory();
 //        hist.visitSites("github");
 //        hist.visitSites("youtube");
 //        hist.visitSites("asmr_original");
@@ -66,9 +64,9 @@ import java.util.*;
 //корзине и возвращает его количество. Если продукта нет, возвращает 0.
 //        ● showBasket(): Выводит все продукты и их количество в корзине.
 
-//public class Dz5 {
+//public class start.Dz5 {
 //    public static void main(String[] args) {
-//        Backet bk = new Backet();
+//        start.Backet bk = new start.Backet();
 //        bk.addProduct("apple", 2);
 //        bk.addProduct("orange", 4);
 //        bk.addProduct("pineapple", 9);

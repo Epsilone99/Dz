@@ -1,8 +1,8 @@
-/*import java.util.Scanner;
+package start;/*import java.util.Scanner;
 //Напишите метод factorial, который принимает число n и возвращает его
 //факториал. Если число n < 0, метод должен вернуть -1.
 
-public class Dz1 {
+public class start.Dz1 {
     public static void main(String[] args) {
     System.out.println(Fact(Number()));
     }
@@ -32,7 +32,7 @@ public class Dz1 {
 /*
 //Напишите метод printEvenNums, который выведет на экран все четные числа
 //в промежутке от 1 до 100, каждое на новой строке.
-public class Dz1 {
+public class start.Dz1 {
     public static void main(String[] args) {
     PrintEvenNums();
     }
@@ -51,7 +51,7 @@ public class Dz1 {
 
 import java.util.Scanner;
 
-public class Dz1 {
+public class start.Dz1 {
     public static void main(String[] args) {
         System.out.println(sumDigits(Number()));
     }
@@ -117,4 +117,5 @@ public class Dz1 {
         if (ans != 1 && ans != 2)
             System.out.println("Нет такой опции, некорректный ввод");
     }
+
 }

@@ -1,3 +1,5 @@
+package start;
+
 public class GBStack {
 
     private int size = 0;
