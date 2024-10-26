@@ -1,24 +1,22 @@
 package OOP1;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.*;
 
-public class Tree implements Serializable, Iterable<Person>{
+public class Tree<T extends Person> implements Serializable, Iterable<T>{
     static Children child1;
     static Parentsmom mom;
     static Parents dad;
-    static HashSet<Person> fam;
     @Serial
     private static final long serialVersionUID = 1L;
 
-    protected static HashSet<Person> Tre() {
-       mom = new Parentsmom("Женский", 22, "Сара", "13.07.2001", "");
-       dad = new Parents("Mужской", 25, "Джон", "14.12.1999", "");
-       child1 = new Children("Mужской", 2, "Дин", "03.09.2023", dad.getName(), mom.getName());
+    protected static ArrayList<Person> Tre() {
+        mom = new Parentsmom("Женский", 22, "Сара", "13.07.2001", "");
+        dad = new Parents("Mужской", 25, "Джон", "14.12.1999", "");
+        child1 = new Children("Mужской", 2, "Дин", "03.09.2023", dad.getName(), mom.getName());
        mom.setMotherOf(child1.getName());
        dad.setFather(child1.getName());
-       fam = new HashSet<>();
+       ArrayList<Person>fam = new ArrayList<>();
         fam.add(child1);
         fam.add(mom);
         fam.add(dad);
@@ -29,37 +27,51 @@ public class Tree implements Serializable, Iterable<Person>{
         return sc.next();
     }
 
-    private static void printAll(Set<Person> per){
+    private static void printAll(ArrayList<Person> per){
         for (Person p : per)
             System.out.println(p);
     }
-    private static void childFatherCheck(Set<Person> tre){
-        System.out.println("Введите имя человека у которого хотите проверить наличие матери : ");
+    private static void childFatherCheck(ArrayList<Person> tre){
+        System.out.println("Введите имя человека у которого хотите проверить наличие отца : ");
         String name = uI();
-        if (name.equals(child1.getName())) {
-            System.err.println("Отец "+ child1.getName() + ": " + child1.childO);
+        boolean found = false;
+        for (Person p : Tre()) {
+            if (p instanceof Children) {
+                Children child = (Children) p;
+                if (child.getName().equals(name)) {
+                    System.err.println("Отец " + child.getName() + ": " + child.childO);
+                    found = true;
+                    break;
+                }
+            }
         }
-        else System.err.println(name + " не является чьим либо ребенком!");
+        if (!found) System.err.println(name + " не является чьим либо ребенком!");
     }
 
-    private static void childMotherCheck(Set<Person> tre){;
+    private static void childMotherCheck(ArrayList<Person> tre){
         System.out.println("Введите имя человека у которого хотите проверить наличие матери : ");
         String name = uI();
-        if (name.equals(child1.getName())) {
-        System.err.println("Мать "+ child1.getName() + ": " + child1.childOf);
+        boolean found = false;
+        for (Person p : Tre()) {
+            if (p instanceof Children) {
+                Children child = (Children) p;
+                if (child.getName().equals(name)) {
+                    System.err.println("Мать " + child.getName() + ": " + child.childOf);
+                    found = true;
+                    break;
+                }
+            }
         }
-        else {
-            System.err.println(name + " не является чьим либо ребенком!");
-        }
+        if (!found) System.err.println(name + " не является чьим либо ребенком!");
     }
-    private static void dam(Set<Person> ha){
+    private static void dam(ArrayList<Person> ha){
         System.out.print("Люди : " );
         for (Person p : Tre()){
             System.out.print(p.getName() + " ");
         }
         System.out.println();
     }
-    private static void sonCheck(Set<Person> tre){
+    private static void sonCheck(ArrayList<Person> tre){
             System.out.println("Введите имя человека у которого хотите посмотреть список детей : ");
             String name = uI();
             switch (name) {
@@ -77,7 +89,7 @@ public class Tree implements Serializable, Iterable<Person>{
 
             }
     }
-    protected static void scenario(Set<Person> per){
+    protected static void scenario(ArrayList<Person> per){
         Scanner sc = new Scanner(System.in);
         dam(Tre());
         boolean cont = true;
@@ -107,14 +119,14 @@ public class Tree implements Serializable, Iterable<Person>{
                 }
         }
     }
-    protected static void sortByAge (HashSet<Person> people){
+    protected static void sortByAge (ArrayList<Person> people){
         ArrayList<Person> arr = new ArrayList<>(people);
         Collections.sort(arr, Comparator.comparingInt(Person::getAge));
         for (Person p : arr){
             System.out.println(p);
         }
     }
-    protected static void sortByName (HashSet<Person> people){
+    protected static void sortByName (ArrayList<Person> people){
         ArrayList<Person> arr = new ArrayList<>(people);
         Collections.sort(arr, Comparator.comparing(Person::getName));
         for (Person p : arr){
@@ -124,15 +136,16 @@ public class Tree implements Serializable, Iterable<Person>{
 
 
     @Override
-    public Iterator<Person> iterator() {
-        return new Iterator<Person>() {
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            int index;
             @Override
             public boolean hasNext() {
-                return false;
+                return true;
             }
 
             @Override
-            public Person next() {
+            public T next() {
                 return null;
             }
         };
