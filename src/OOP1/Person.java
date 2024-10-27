@@ -2,7 +2,7 @@ package OOP1;
 
 import java.io.Serializable;
 
-public abstract class Person implements Serializable {
+public abstract class Person implements Serializable, TypeOfObj {
     protected String sex;
     protected int age;
     protected String name;

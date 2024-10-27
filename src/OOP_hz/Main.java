@@ -4,6 +4,7 @@ package OOP_hz;
 import OOP_hz.service.Service;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,6 +31,19 @@ public class Main {
 
         service.sortByAge();
         System.out.println(service.studentGroupInfo());
+
+        int sum = 0;
+        while (true){
+            System.out.println("Введите число : ");
+            int num = new Scanner(System.in).nextInt();
+            if (num == 0){
+                sum = 0;
+            }
+            else {
+                sum += num;
+            }
+            System.out.println("sum is : " + sum);
+        }
 
     }
 }

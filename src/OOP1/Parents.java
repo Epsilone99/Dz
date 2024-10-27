@@ -1,7 +1,7 @@
 package OOP1;
 
 
-public class Parents extends Person {
+public class Parents extends Person implements TypeOfObj{
     protected String fatherOf;
 
     public Parents(String sex, int age, String name, String birthDay, String fatherOf) {
@@ -19,7 +19,6 @@ public class Parents extends Person {
     }
 
 
-    @Override
     public String toString() {
         return "(Родитель) " +
                 "Имя : " + name + ";" +

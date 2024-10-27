@@ -1,6 +1,6 @@
 package OOP1;
 
-public class Parentsmom extends Person{
+public class Parentsmom extends Person implements TypeOfObj{
     protected String motherOf;
 
     public Parentsmom(String sex, int age, String name, String birthDay, String motherOf) {
@@ -16,7 +16,6 @@ public class Parentsmom extends Person{
         this.motherOf = motherOf;
     }
 
-    @Override
     public String toString() {
         return "(Родитель) " +
                 "Имя : " + name + ";" +
@@ -25,4 +24,5 @@ public class Parentsmom extends Person{
                 " Дата рождения : " + birthDay + "; " +
                 "Мать : " + motherOf ;
     }
+
 }

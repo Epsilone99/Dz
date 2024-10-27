@@ -1,7 +1,7 @@
 package OOP1;
 
 
-public class Children extends Person{
+public class Children extends Person implements TypeOfObj{
     protected String childO;
     protected String childOf;
 
@@ -27,7 +27,6 @@ public class Children extends Person{
         this.childOf = childOf;
     }
 
-    @Override
     public String toString() {
         return "(Ребенок) " +
                 "Имя : " + name + ";" +
